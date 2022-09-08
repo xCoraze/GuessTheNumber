@@ -1,17 +1,17 @@
 import random
 secretNumber = random.randint(1, 25)
-print("Ich denke an eine Zahl zwischen 1 und 25.")
+print("I am thinking of a number between 1 and 25.")
 
 for guessesTaken in range(1, 7):
     print("Errate die Zahl!")
     guess = int(input())
 
     if guess < secretNumber:
-        print('Diese Zahl ist zu niedrig.')
+        print('Your guess is too low.')
     elif guess > secretNumber:
-        print("Diese Zahl ist zu hoch.")
+        print("Your guess is too high.")
     else:
         break
 
 if guess == secretNumber:
-    print("Du liegst richtig! Du hast die Zahl in " + str(guessesTaken) + " Versuchen erraten.")
+    print("Good job! You guessed the number in " + str(guessesTaken) + " guesses.")
